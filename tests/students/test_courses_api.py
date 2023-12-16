@@ -10,10 +10,6 @@ def client():
     return APIClient()
 
 @pytest.fixture
-def user():
-    return User.objects.create_user('admin')
-
-@pytest.fixture
 def course_factory():
     def courses_make(*args, **kwargs):
         return baker.make(Course, *args, **kwargs)
